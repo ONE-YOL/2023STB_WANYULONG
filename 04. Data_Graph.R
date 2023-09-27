@@ -18,6 +18,10 @@ barplot(entry, legend = TRUE)
 pie(table(KOTRA2023 $진출대륙명))
 pie(table(KOTRA2023 $투자형태))
 
+pie(table(KOTRA2023 $투자형태), col=rainbow(12), main="해외진출기업의투자형태")
+pie(table(KOTRA2023 $투자형태), col=heat.colors(12), main="해외진출기업의투자형태")
+pie(table(KOTRA2023 $투자형태), col=terrain.colors(12), main="해외진출기업의투자형태")
+pie(table(KOTRA2023 $투자형태), col=topo.colors(12), main="해외진출기업의투자형태")
 
 colors <- c("red", "orange", "yellow", "green", "blue")
 pie(table(KOTRA2023 $투자형태), col=colors, main="해외진출기업의 투자형태")
