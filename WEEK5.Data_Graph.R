@@ -4,14 +4,15 @@ Client_ID <- "XSgTAqY22SfEv6H9ivQ6"
 
 Client_Secret <- "LSJujZa8Zq"
 
-query <- URLencode(iconv("BYD", "euc-kr", "UTF-8"))
+query <- URLencode(iconv("경영통계", to="UTF-8"))
 
-url <- paste(searchUrl, "?query=BYD", query, "&display=25", sep="")
+url <- paste(searchUrl, "?query=BYD", query, "&display=50&start=1&sort=sim", sep="")
 
 doc <- getURL(url, 
               httpheader = c('Content-Type' = "apllication/xml",
                              'X-Naver-CLient-Id' = Client_ID, 
                              'X-Naver-CLient-Secret' = Client_Secret))
+
 doc
 
 xmlFile <- xmlParse(doc)

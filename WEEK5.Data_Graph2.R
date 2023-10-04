@@ -4,9 +4,9 @@ Client_ID <- "XSgTAqY22SfEv6H9ivQ6"
 
 Client_Secret <- "LSJujZa8Zq"
 
-query <- URLencode(iconv("BYD", "euc-kr", "UTF-8"))
+query <- URLencode(iconv("경영통계", to="UTF-8"))
 
-url <- paste(searchUrl, "?query=", query, "&display=25", sep="")
+url <- paste(searchUrl, "?query=BYD", query, "&display=100&start=1&sort=sim", sep="")
 
 doc <- getURL(url, 
               httpheader = c('Content-Type' = "apllication/xml",
